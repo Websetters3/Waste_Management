@@ -12,12 +12,12 @@
 {% load static%}
 <style>
 body {
-  background-image: url("{% static "back1.jpg" %}");
+  background-image: url("{% static 'back1.jpg' %}");
 
 }
 </style>
 
-<form action="/job/form/" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="post">{% csrf_token %}
+<form action="/Main/contact" class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin" method="post">{% csrf_token %}
 <h2 class="w3-center">Contact Us</h2>
  
 <div class="w3-row w3-section">
@@ -32,7 +32,7 @@ body {
 <div class="w3-row w3-section">
   <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
     <div class="w3-rest">
-      <input class="w3-input w3-border" id="email" name="email" type="text" placeholder="Email">
+      <input class="w3-input w3-border" id="email" name="email" type="email" placeholder="Email">
     </div>
 </div>
 
@@ -77,7 +77,7 @@ body {
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="{% static "job/card.jpg" %}" class="img-fluid rounded-start" alt="...">
+      <img src="{% static "card.jpg" %}" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -94,7 +94,7 @@ body {
 <div class="card mb-3" style="max-width: 540px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="{% static "job/card.jpg" %}" class="img-fluid rounded-start" alt="...">
+      <img src="{% static "card.jpg" %}" class="img-fluid rounded-start" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -112,7 +112,7 @@ body {
 
 <footer>
         <div class="text-center"><font color="red" size="5">
-          <center> copyright &copy; www.MyCareer.com . All rights reserved!</center></font>
+          <center> copyright &copy; www.WasteManagement.com . All rights reserved!</center></font>
         </div>
     </footer>
 </body>

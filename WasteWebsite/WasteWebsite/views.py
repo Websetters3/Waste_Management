@@ -2,7 +2,6 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 def index(request):
-    return HttpResponse('Django CodeWithHarry Cheatsheet')
+    return render(request,'index.html')
 
-def contact(request):
-    return render(request, 'contact.html') 
+
