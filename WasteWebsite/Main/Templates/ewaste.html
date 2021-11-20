@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-WASTE</title>
+    <style>
+         .h-primary {
+            font-size: 3rem;
+            font-family: 'Ubuntu', sans-serif;
+            text-shadow: 2px 2px gray;
+        }
+
+        .h-secondary {
+            font-size: 2rem;
+        }
+        .h-ternary{
+            font-size: 1.4rem;
+        }
+        .text-align {
+            text-align: center;
+        }
+
+        /* part 1 */
+        #i1 p {
+            margin: 5px 30px;
+            font-size: 1.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .box1 p {
+            /* margin: 5px 30px; */
+            font-size: 1.2rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .box1 li {
+            /* margin: 5px 40px; */
+            font-size: 1.1rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+
+        }
+
+        #i2 {
+            display: flex;
+            margin: 10px;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #i2 img {
+            height: 500px;
+            width: 40%;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .box1 p {
+            font-size: 1.3rem;
+        }
+
+
+        /* body styling  - part 2*/
+        .body {
+            margin-top: 200px;
+        }
+
+        #characteristics {
+            width: 80%;
+            margin: 30px 100px;
+        }
+
+        #characteristics::before {
+            content: "";
+            background-image: url(ewaste2.jpg);
+            position: absolute;
+            width: 90%;
+            height: 90%;
+            background-position: left;
+            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        #characteristics li {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 5px;
+            padding: 3px;
+        }
+
+        /* part 3 */
+        .main_box {
+            display: flex;
+            width: 100vw;
+
+
+        }
+
+        .container {
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .container p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .container img {
+            display: block;
+            margin: auto;
+            height: 100px;
+            width: 200px;
+        }
+
+        #container-1 {
+            width: 30%;
+        }
+
+        #container-2 {
+            width: 30%;
+        }
+
+        #container-3 {
+            width: 30%;
+        }
+
+        /* Responsiveness of website ,part-1 */
+
+        @media only screen and (min-width:670px) and (max-width:1050px) {
+            .h-primary {
+                font-size: 2rem;
+                font-family: 'Ubuntu', sans-serif;
+                text-shadow: 1.5px 1.5px gray;
+            }
+
+            .h-secondary {
+                font-size: 1.4rem;
+            }
+
+            /* part-1 */
+            #i1 p {
+                font-size: 1.1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            #i2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .box1 p {
+                font-size: 1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            .box1 li {
+                margin: 6px;
+                font-size: 0.9rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+
+            }
+
+            /* part-2 */
+            #characteristics::before {
+                content: "";
+                background-image: none;
+            }
+            #characteristics li {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 2px;
+
+            }
+
+            /* part-3 */
+            .main_box {
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw; */
+            }
+
+            #container-1 {
+                width: 100%;
+            }
+
+            #container-2 {
+                width: 100%;
+            }
+
+            #container-3 {
+                width: 100%;
+            }
+
+        }
+
+        /* Responsiveness of website ,part-1 */
+
+        @media only screen and (max-width:670px) {
+            .h-primary {
+                font-size: 2rem;
+                font-family: 'Ubuntu', sans-serif;
+                text-shadow: 1.5px 1.5px gray;
+            }
+
+            .h-secondary {
+                font-size: 1.4rem;
+            }
+
+            #i2 {
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                
+                /* align-items: center; */
+                /* justify-content: center; */
+            }
+
+            #i2 img {
+                height: 500px;
+                width: 100%;
+            }
+            
+            .box1 p {
+            
+                font-size: 1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            .box1 li {
+                margin: 0px;
+                padding: 0px;
+                
+                font-size: 0.9rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+
+            }
+            /* part-2 */
+            #characteristics::before {
+                content: "";
+                background-image: none;
+            }
+            #characteristics li {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 0.8rem;
+                font-weight: bold;
+                margin: 0px;
+                padding: 0px;
+
+            }
+            /* part-3 */
+            .main_box {
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw; */
+            }
+
+            #container-1 {
+                width: 100%;
+            }
+
+            #container-2 {
+                width: 100%;
+            }
+
+            #container-3 {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+</head>
+<body bgcolor="lightgrey">
+     <div class="content">
+
+        <div class="intro">
+            <div id="i1">
+                <h1 class="h-primary text-align">What is E-Waste?</h1>
+                <p class="text-align">E-waste is any electrical or electronic equipment that’s been discarded. This includes working and broken items that are thrown in the garbage or donated to a charity reseller like Goodwill. Often, if the item goes unsold in the store, it will be thrown away. E-waste is particularly dangerous due to toxic chemicals that naturally leach from the metals inside when buried.
+                </p>
+            </div>
+            <div id="i2">
+                <div class="box1">
+                    <h3 class="h-primary">E-Waste mountain</h3>
+
+                    <p>The e-Waste (Management) Rules were notified in 2016 which got amended from time to time. So far, the Environment Ministry has notified 21 types of electrical and electronic equipment (EEE) as e-waste.In 2017-18, India generated 7,08,445 tonnes of e-waste and 7,71,215 tonnes in 2018-19 – an increase of 8.86 per cent.
+                    </p>
+                        <p>
+                        Accepting the steady rise in the production of e-waste in the country, Choubey said, “The Government has assessed the increase in e-waste in the country during 2017-18, 2018-19 and 2019-20. The formula for estimation of e-waste generation involves the sale of EEE. Scrutiny of sales data reveals that there have been continuous increases in the sales data since 2007-08 and hence there is an increase in e-waste generation.”
+                        </p>
+                    
+                </div>
+                <img src='{% static "mountain.jpeg" %}' alt="Failed to load image">
+
+            </div>
+            <div id="characteristics">
+                <h4 class="h-primary text-align">Disadvantages of E-waste</h4>
+                <ul type="square">
+                    <li><span class="h-ternary">E-waste Releases Toxic Chemicals, Causing Air Pollution-</span> n many cases, burning e-waste can help get valuable metals and materials, such as copper. Moreover, people tend to also extract these higher value items by desoldering or using acids.Unfortunately, both of these methods tend to release toxic fumes, harmful chemicals that are typical to increase chronic diseases’ chances. The worst part of it all is that these poisonous particles can travel great distances, thus posing a great danger to both humans and animals.</li>
+                    <li><span class="h-ternary">Electronic Products Make Up a Million Tons of Waste in Landfills-</span> As we said before, electronics make up to 2.8 million tons of waste in landfills. Just like this type of waste can have valuable materials, it can also bring harmful heavy metals. These metals often include cadmium, mercury, and lead.When e-waste ends up in landfills, the metals degrade and start to contaminate the environment. This contamination brings dangerous effects to the vicinity of the landfill.</li>
+                    <li><span class="h-ternary">Electronic Devices Negatively Impacts Soil, Water, and Air</span> When the harmful toxins of electronics seep down onto the soil, the soil can go through many changes, including its type, pH levels, and composition. Not only that, but these toxins can also remain on the ground for long periods of time.</li>
+                    <li><span class="h-ternary">Components like Polybrominated Flame Retardants, Barium, and Lead Negatively Impact Human Health-</span>Lastly, among the hazardous impacts of e-waste, we have its effects on human health. If the dangerous toxins of electronics are let out of the environment, it can bring all sorts of troubles to humans. Their components, such as polybrominated flame retardants, lead, lithium, and barium, can bring all sorts of adverse effects to your organs.Some of the most affected organs from this sort of issue include your brain, kidney, liver, skeletal system, and heart. In the worst cases, it can even damage your reproductive and nervous system. This ends up in people with birth defects and diseases..</li>
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <h2 class="h-primary text-align">E-waste Management</h2>
+            <div class="main_box">
+
+                <div class="container" id="container-1">
+                    <h3 class="h-secondary text-align">E-waste Prevention</h3>
+                    <img src='{% static "garbage.jpeg" %}' alt="Error to load the image">
+                    <p class="para1">
+                        Improperly disposed e-waste is becoming more and more hazardous, especially as the sheer volume of our e-waste increases.For this reason, large brands like Apple, Samsung, and other companies have started giving options to its customers to recycle old electronics. Sometimes, you may even get financial compensation for recycling your old devices!Recycling old electronics allows the expensive electronic parts inside to be reused. This can save a lot of energy and reduce the need for mining of new raw resources, or manufacturing new parts.You can find electronic recycling programs in your local area by doing a Google search for “recycle electronics” and your city or area name.
+                    </p>
+                </div>
+                <div class="container" id="container-2">
+                    <h3 class="h-secondary text-align">Electronic Reuse</h3>
+                    <img src='{% static "reuse.jpeg" %}' alt="Error to load the image">
+                    <p class="para1">
+                        One of the best ways to save your money and reduce e-waste is to keep your electronics well-maintained, to increase its life.Donating electronics to the needy is also a practice followed by many. It not only gives the gadget a new life, but also makes you feel good about yourself. If you decide to donate your old electronic devices when you don’t need them anymore, make sure to clear any information (like data in your laptop hard drive) before you donate it.However, along with maintaining your electronic devices by cleaning them regularly to help them last for longer, you could also learn how to fix hardware problems on your device.
+                    </p>
+                </div>
+                <div class="container" id="container-3">
+                    <h3 class="h-secondary text-align">Proper Disposal</h3>
+                    <img src='{% static "disposal.jpeg" %}' alt="Error to load the image">
+                    <p class="para1">
+                        Every time when we replace one of our electronic devices, it‟s our responsibility to be sure that our device gets recycled properly and not shipped to third world countries. We should find a responsible e-waste recycler. We can use a Certified E-Waste Recycler through the Basel Action Network (BAN) and give them our gadgets for disposal. We can visit Civic Institutions like local government, schools and universities for additional responsible recycling options. We can also search retail options like Best Buy for proper disposal of gadgets. We can donate our electronics gadgets if it still has life left.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,11 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    {% load static%}
     <STYle>
+      
         *{
         margin: 0px;
         padding: 0px;
@@ -19,6 +23,7 @@
         }
         html{
             scroll-behavior: smooth;
+            
         }
         /* Navbar Styling */
         #navbar{
@@ -58,13 +63,14 @@
         /* Home Styling  */
         #home::before{
             content: "";
-            background: url(hack2.jpg);
+            background: url'{% static "home.jpg" %}';
             position: absolute;
             height: 100%;
             width: 100%;
             background-repeat: no-repeat;
             background-position: top center;
             z-index: -1;
+            
         }
         
         #home{
@@ -74,16 +80,20 @@
             align-items: center;
             height: 100vh;
             width: 100%;
+            color: red;
+            
         }
           
         #home p{
             font-size: 1.5rem;
             text-align: center;
+            color: red;
         }
         /* options styling */
         #options{
             display: flex;
-
+            
+            
         }
         #options .box{
             /* border: 3px solid red; */
@@ -91,20 +101,28 @@
             margin: 20px 7px;
             padding: 25px;
             border-radius: 30px;
+            background-color: sandybrown;
+            
+            
         }
         #options .box img{
             height: 150px;
             width: 200px;
             display: block;
             margin: auto;
+            background-color: sandybrown;
+            
         }
         .box p{
             font-family: 'Ubuntu', sans-serif;
             font-weight: bold;
+            background-color: sandybrown;
+           
         }
         /* Used Everywhere */
         .text-center{
             text-align: center;
+            
         }
         .h-primary{
         
@@ -148,16 +166,19 @@
             /* word-wrap: break-word; */
             font-weight: bold;
             text-align: center;
+            
         }
         #options{
             flex-direction: column;
+            background-color: sandybrown;
         }
         #options .box{
-            /* border: 3px solid red; */
+            /*border: 3px solid red; */
             height: 260px;
             margin: 12px;
             padding: 5px;
             border-radius: 30px;
+            background-color: sandybrown;
         }
         #options .box img{
             height: 60px;
@@ -178,10 +199,13 @@
             margin: 1px; 
         }
         }
+       
     </STYle>
+     
 </head>
-<body>
-    {% load static%}
+
+<body background='{% static "homemain2.png" %}' >
+   
     <!-- Navigation Bar -->
     <!--<nav id="navbar">
         
@@ -195,60 +219,77 @@
             </ul>
         </div>
     </nav>-->
-   
+    <div class="w3-panel w3-green w3-display-container">
+      <span onclick="this.parentElement.style.display='none'"
+      class="w3-button w3-large w3-display-topright">&times;</span>
+      <h3>WELCOME!</h3>
+      <p>We are always here to help you</p>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">iCoder</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item {% block homeactive %}  {% endblock homeactive %}">
-              <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item {% block aboutactive %}  {% endblock aboutactive %}" >
-              <a class="nav-link" href="/about">About</a>
-            </li>
-            <li class="nav-item {% block contactactive %}  {% endblock contactactive %} ">
-              <a class="nav-link" href="/contact">Contact</a>
-            </li>
-            <li class="nav-item {% block blogactive %}  {% endblock blogactive %} ">
-              <a class="nav-link" href="/blog">Blog</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Higher Studies
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="job/mba">MBA</a></li>
-                  <li><a class="dropdown-item" href="job/mtech">M TECH</a></li>
-      
-                  <li><a class="dropdown-item" href="job/gre">GRE</a></li>
-                    <li><a class="dropdown-item" href="job/upsc">UPSC</a></li>
-                    <li><hr class="dropdown-divider"></li>
-                </ul>
-              </li>
-          </ul>
+      <div id="logo">
+        <img src='{% static "logo.jpeg" %}' alt="WASTE_CONQUERERS">
+    </div>
+      <a class="navbar-brand" href="/">WebSetters</a>
 
-          
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item {% block homeactive %}  {% endblock homeactive %}">
+            <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+          </li>
+         
+         
+          <li class="nav-item {% block blogactive %}  {% endblock blogactive %} ">
+            <a class="nav-link" href="Main/wet">Wet Waste</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dry Waste
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Main/ewaste">E-waste</a></li>
+                <li><a class="dropdown-item" href="Main/plastic">Platic Waste</a></li>
+              
+                  <li><a class="dropdown-item" href="Main/other">Other</a></li>
+                  <li><hr class="dropdown-divider"></li>
+              </ul>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="Main/case">Case Study</a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="Main/links">Major Links</a>
+            </li>
 
-               <!-- Button to  trigger SignUp modal -->
-
+            <li class="nav-item  ">
+              <a class="nav-link" href="Main/contact">Contact</a>
+            </li>
+            <li class="nav-item " >
+              <a class="nav-link" href="Main/about">About</a>
+            </li>
+        </ul>
+  
+        
+  
+             <!-- Button to  trigger SignUp modal -->
+  
   <!-- Button to  trigger Login modal -->
   {% if user.is_authenticated %}
   <ul class="navbar-nav mr-2">
   <li class="nav-item dropdown">
   <a class="nav-link dropdown-toggle" href='#' id="navbarDropdown" role="button" data-toggle="dropdown"> Welcome {{request.user}}</a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="Main/logout">Logout</a>
+          <a class="dropdown-item" href="Main/logout">Logout</a>
   
-          </div>
-        </li>
-        </ul>
         </div>
+      </li>
+      </ul>
+      </div>
   {% else %}
-    <!-- Button to  trigger Login modal -->
+  <!-- Button to  trigger Login modal -->
   <button type="button" class="btn btn-success mr-2" data-toggle="modal" data-target="#loginModal">
   Login
   </button>
@@ -257,117 +298,119 @@
   SignUp
   </button>
   {% endif %}
-
+  
+      </div>
+    </nav>
+    {% for message in messages  %}            
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          <strong>Message : </strong> {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
-      </nav>
-      {% for message in messages  %}            
-      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
-            <strong>Message : </strong> {{ message }}
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-      {% endfor %}    
-
-
-
- 
-
-<!-- SignUp Modal -->
-<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
+    {% endfor %}    
+  
+  
+  
+  
+  
+  <!-- SignUp Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="signupModalTitle">SignUp Here</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action= "/Main/signup" method='post'>{% csrf_token %}
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="signupModalTitle">SignUp Here</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form action= "/Main/signup" method='post'>{% csrf_token %}
   <div class="form-group">
-    <label for="username">Username</label>
-    <input type="text" class="form-control" id="username" name="username" placeholder="Choose a unique username">
+  <label for="username">Username</label>
+  <input type="text" class="form-control" id="username" name="username" placeholder="Choose a unique username">
   </div>
   <div class="form-group">
-    <label for="fname">First Name</label>
-    <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name">
+  <label for="fname">First Name</label>
+  <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter Your First Name">
   </div>
   <div class="form-group">
-    <label for="lname">Last Name</label>
-    <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name">
+  <label for="lname">Last Name</label>
+  <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter Your Last Name">
   </div>
   <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+  <label for="email">Email address</label>
+  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
   </div>
   <div class="form-group">
-    <label for="pass1">Choose a password</label>
-    <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password">
+  <label for="pass1">Choose a password</label>
+  <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose Your Password">
   </div>
   <div class="form-group">
-    <label for="pass2">Confirm Password</label>
-    <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again">
+  <label for="pass2">Confirm Password</label>
+  <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Enter your password again">
   </div>
- 
-
-        {% csrf_token %}
-        <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-      </div>
-      <div class="modal-footer">
-      </div>
+  
+  
+      {% csrf_token %}
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+    </div>
+    <div class="modal-footer">
     </div>
   </div>
-</div>
-
-
-
-
-
-
-   
-
-<!-- Login Modal -->
-
-<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
+  </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Login Modal -->
+  
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModal" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form action="Main/login" method="POST"> {% csrf_token %}
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="loginModalTitle">Login Here</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form action="Main/login" method="POST"> {% csrf_token %}
   <div class="form-group">
-    <label for="username">Username</label>
-    <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Choose a unique username">
+  <label for="username">Username</label>
+  <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Choose a unique username">
   </div>
   <div class="form-group">
-    <label for="password">Enter your password </label>
-    <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter your password ">
+  <label for="password">Enter your password </label>
+  <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Enter your password ">
   </div>
- 
-        <button type="submit" class="btn btn-primary">Submit</button>
-</form>
-      </div>
-       <div class="modal-footer">
-      </div>
+  
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
     </div>
+     <div class="modal-footer">
     </div>
-    </div>
+  </div>
+  </div>
+  </div>
+  
+    
         <!-- HOME  -->
         <div id="home">
             <h1 class="h-primary text-center">"CAN'T SEE THIS, RIGHT?" </h1>
             <div class="container">
                 <p class="h-secondary text-center">SURELY WE CAN CHANGE IT TOGETHER. </p>
             </div>
-            <div id="logo">
-                <img src="hack1.jpg" alt="WASTE_CONQUERERS">
-            </div>
-        </div>
+            <img src='{% static "home.jpg" %}'>
+          </div>
+             
+        
 
 
 
@@ -375,35 +418,28 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src='{% static "job/higher.png" %}' class="d-block w-50" alt="Manss">
+            <img src='{% static "slide1.jpeg" %}' class="d-block w-50" alt="Failed To Load Image">
           </div>
           <div class="carousel-item">
-            <img src='{% static "job/enter.jpg" %}' class="d-block w-50"  alt="...mana">
+            <img src='{% static "slide2.jpg" %}' class="d-block w-50"  alt="Failed To Load Image">
           </div>
-          <div class="carousel-item">
-            <img src='{% static "job/screen1.jpg" %}' class="d-block w-50" alt=".mn..">
+          
+             <div class="carousel-item">
+            <img src='{% static "slide3.jpg" %}' class="d-block w-50" alt="Failed To Load Image">
           </div>
              <div class="carousel-item">
-            <img src='{% static "job/job1.jpg" %}' class="d-block w-50" alt=".mn..">
+            <img src='{% static "slide4.png" %}' class="d-block w-50" alt="Failed To Load Image">
           </div>
              <div class="carousel-item">
-            <img src='{% static "job/enter3.jpg" %}' class="d-block w-50" alt=".mn..">
+            <img src='{% static "slide5.jpg" %}' class="d-block w-50" alt="Failed To Load Image">
           </div>
              <div class="carousel-item">
-            <img src='{% static "job/higher3.jpg" %}' class="d-block w-50" alt=".mn..">
+            <img src='{% static "slide6.jpeg" %}' class="d-block w-50" alt="Failed To Load Image">
           </div>
              <div class="carousel-item">
-            <img src='{% static "job/career3.jpg" %}' class="d-block w-50" alt=".mn..">
+            <img src='{% static "slide7.jpg" %}' class="d-block w-50" alt="Failed To Load Image">
           </div>
-             <div class="carousel-item">
-            <img src='{% static "job/higher1.jpg" %}' class="d-block w-50" alt=".mn..">
-          </div>
-             <div class="carousel-item">
-            <img src='{% static "job/job2.jpg" %}' class="d-block w-50" alt=".mn..">
-          </div>
-             <div class="carousel-item">
-            <img src='{% static "job/enter2.png" %}' class="d-block w-50" alt=".mn..">
-          </div>
+          
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -420,18 +456,18 @@
     <!--<h1 class="h-primary text-center">About Us</h1>-->
     <section id="options">
         <div class="box">
-            <img src="hack3.jpg" alt="Error to load image">
+            <img src='{% static "hazard.jpeg" %}' alt="Error to load image">
             <h3 class="h-secondary text-center">Waste Hazard</h3>
             <p>Waste’ is any unwanted or unuseful material. These are objects that have been discarded since these materials aren’t functioning anymore. Waste can be in any form (liquid, solid or gas), although generally, waste is solid. There are various types of wastes like unwanted food, torn clothes, kitchen waste, etc.Garbage problem is a real issue in a lot of societies and the world at large. Reports show that globally, we stand to collect 11 million tonnes of garbage in a day. This is an extremely high number because it shows that the generation rate is also high.
             </p>
         </div>
         <div class="box">
-            <img src="hack4.jpg" alt="Error to load image">
+            <img src='{% static "japan.jpeg" %}' alt="Error to load image">
             <h3 class="h-secondary text-center">Case Study - Japan</h3>
             <p>Waste management in Japan today emphasizes not just the efficient and sanitary collection of waste, but also reduction in waste produced and recycling of waste when possible. This has been influenced by its history, particularly periods of significant economic expansion, as well as its geography as a mountainous country with limited space for landfills. Important forms of waste disposal include incineration, recycling and, to a smaller extent, landfills and land reclamation. Although Japan has made process since the 1990s in reducing waste produced and encouraging recycling, there is still further progress to be made in reducing reliance on incinerators and the garbage sent to landfills. Challenges also exist in the processing of electronic waste and debris left after natural disasters.</p>
         </div>
         <div class="box">
-            <img src="hack5.jpg" alt="Error to load image">
+            <img src='{% static "garbage.jpeg" %}'alt="Error to load image">
             <h3 class="h-secondary text-center">Waste collecters</h3>
             <p>We provide you information about nearby waste collectors.Waste collection is a part of the process of waste management. It is the transfer of solid waste from the point of use and disposal to the point of treatment or landfill. Waste collection also includes the curbside collection of recyclable materials that technically are not waste, as part of a municipal landfill diversion program. Waste is sepeted according to the types.,Dry Waste ,Wet Waste,Recyclable Waste,Biodegredable Waste.
             </p>
@@ -439,27 +475,22 @@
 
     </section>
     
-          <!-- Optional JavaScript; choose one of the two! -->
-      
-          <!-- Option 1: Bootstrap Bundle with Popper -->
+         
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
       
-          <!-- Option 2: Separate Popper and Bootstrap JS -->
-          <!--
-          <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-          -->
+          
       
       
-<div>
-    <footer>
-        <div class="text-center"><font color="red" size="5">
-          <center> copyright &copy; www.WasteManagement.com . All rights reserved!</center></font>
-        </div>
-    </footer>
-</div>
+
 
 
 </body>
 
 </html>
+<!--<div>
+  <footer>
+      <div class="text-center"><font color="red" size="5">
+        <center> copyright &copy; www.WebSetters.com . All rights reserved!</center></font>
+      </div>
+  </footer>
+</div>-->

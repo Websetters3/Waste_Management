@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+
+    <title>JAPAN_cASE_STUDY</title>
+    <style>
+        .h-primary {
+            font-size: 3rem;
+            font-family: 'Ubuntu', sans-serif;
+            text-shadow: 2px 2px gray;
+        }
+
+        .h-secondary {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 2rem;
+        }
+        .h-ternary{
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.3rem;
+        }   
+
+        .text-align {
+            text-align: center;
+        }
+        /* first */
+        #first {
+            display: flex;
+            margin: 10px;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        #first img {
+            height: 450px;
+            width: 40%;
+        } 
+/* 
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        } */
+
+       
+        /* second */
+        #second{
+            margin: 10px;
+            padding: 20px;
+            font-size: 1.1rem;
+           
+        }
+        #second .box2 {
+            display: flex;
+            margin: 20px;
+        }
+        .box2 img{
+            height: 350px;
+            width: 40%;
+            padding: 30px;
+        }
+        #third{
+            margin: 50px;
+            padding: 20px;
+            font-size: 1.1rem;
+            
+        }
+        /* Responsiveness */
+    @media only screen and (max-width:800px){
+        #first {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+        }
+
+        #first img {
+            height: 250px;
+            width: 85%;
+        }
+        #second{
+            font-size: 0.8rem;
+           
+        }
+        #second .box2 {
+            display: flex;
+            flex-direction: column;
+        }
+        .box2 img{
+            height: 200px;
+            width: 85%;
+         
+        }
+    }
+    </style>
+</head>
+<body bgcolor="lightyellow" >
+    
+    <div class="main">
+        <H1 class="h-primary text-align">CASE STUDY JAPAN</H1>
+        <P class="text-align h-ternary">In Japan the subjects of waste treatment and waste management are becoming increasingly important. The country is highly industrialized and large amounts of fossil fuel and mineral resources are imported, converted to many kinds of products and energy, and then consumed in a small geographical area. These processes are resulting in the production of a great deal of waste, and serious issues have therefore arisen on waste minimization, environmental pollution control, proper incineration, safe final disposal, and material recovery (recycling).</P>
+        <p>Following are techniques used by Japan for proper waste management- 
+            <ul>
+                <li> Collection and Transport</li>
+                <li> Municipal waste incineration technology</li>
+                <li> Medical waste disposal technology</li>
+                <li> PET bottle recycling technology</li>
+                <li> Biomass utilization technology</li>
+                <li> Waste landfill technology</li>
+            </ul>
+        </p>
+    </div>
+    <div id="first">
+        <div class="box1">
+            <h3 class="h-secondary">Collection and Transport</h3>
+
+            <p>The expansion of urban areas widens the garbage collection zone. It is possible to improve the efficiency of 
+                collection and transport operations in cities with widening collection zones by setting up waste transfer stations 
+                where wastes can be transferred from small- or medium-sized garbage trucks to larger trucks.
+                 The cost of collecting and transporting garbage accounts for high percentage of waste disposal operations. 
+                Improving the efficiency of collection and transport leads to cost reduction while maintaining or improving 
+                services to residents.
+            </p>
+            <p>There are two types of this garbage collection trucks - mechanical trucks (Mobile Packers) and 
+                compressor-type trucks, but mobile packers are more commonly used. Packers scoop up the garbage with a 
+                spinning disk and thrust it into the storage space with a sliding board. Garbage with high moisture content 
+                reduces compression efficiency; however, with continuous modification, trucks have achieved high 
+                compression rate, with 1.5 times more load than flat pile trucks.
+                 Compressor-type trucks press down the garbage on to the floor with a compressor board (pressing plate), and 
+                after breaking it up and reducing volume, the garbage is slid into the storage area. The trucks efficiently collect 
+                large garbage requiring breakdown, bulky PET bottles and plastic waste.
+                 Due to the worldwide problem of global warming, low-pollution-type garbage trucks, such as electric 
+                motor-drive and hybrid trucks are being developed and put into practical use.</p>
+        </div>
+        <img src="{%static 'japan1.jpg'%}" alt="Collection and Transport">
+
+    </div>                
+    <div id="second">
+        <h3 class="h-secondary">Municipal waste incineration technology</h3>
+        <h4 class="h-ternary">Advanced ability to prevent pollution and high-efficiency power generation - </h4>
+        
+        <p>From about 1960, Japan began disposing urban garbage by incineration, and today, Japan possesses the 
+            world's leading garbage incineration facilities. In the fiscal year 2009, there were 1243 incineration facilities in 
+            Japan, incinerating garbage using several methods - stoker furnaces, fluidized bed furnaces, and gasification 
+            fusion resource furnaces with the objective of ash recycling. Stoker furnaces account for 70% of all furnaces, 
+            and improvement of this type of furnace is progressing rapidly.
+            Today, while high level environmental conservation technologies are being introduced, technologies related to 
+            high-efficiency power generation and technologies related to safe operation, such as automatic incineration 
+            devices and automatic cranes, are also being developed. We are now accumulating know-how on handling 
+            diverse types of garbage of today, ranging from the low-calorie garbage, which was generated when 
+            incineration facilities were first being built, to the high-calorie garbage. Such technology can be utilized for the 
+            type of garbage generated in the Asian region.
+            The newest stoker furnace technology is low air incineration that aims for high-efficiency power generation, 
+            which is already under construction in Japan. The figure below shows one example of the latest technology: a 
+            facility exhibiting high pollution prevention and high-efficiency power generation capacity
+        </p>
+        <h4 class="h-ternary">Solution to poisonous gas and dioxin emissions - </h4>
+        <p> Studies have shown that dioxin is produced by incomplete combustion of waste, and measures have been taken to prevent 
+            and reduce dioxin generation with complete combustion in the furnace. Other countermeasures taken includes exhaust 
+            cooling to prevent the resynthesis of dioxin, application of bag filters to thoroughly eliminate dioxin contained in smoke, and the 
+            development of activated coal, which adsorbs and eliminates dioxin in exhaust fumes and a catalyst that decomposes dioxin. 
+            Based on the above-mentioned studies, structural and maintenance management standards for the incineration plants were 
+            established.</p>
+            <h4 class="h-ternary">New-Generation Incineration Technology</h4>
+            <p>There are many city incineration plants, both large and small, being operated in compliance with the strict 
+                antipollution policies implemented in Japan. While many technologies have been developed, including technology 
+                to reduce dioxin emission, remove acidic gas and recycle incinerated ash, the conventional stoker furnace has seen 
+                significant improvement. The conventional stoker furnace's highly efficient technology enables electric generation 
+                from recovered heat waste and makes it an effective measure against greenhouse emissions. Its improvement and 
+                objective are summarized in the chart below. Together with the improvement of heat recovery after incineration, this 
+                system makes it possible to efficiently generate clean electricity compared to the conventional method. These new 
+                technologies enabled Japan's incineration plants to become safe and sound while generating electricity efficiently.</p>
+                
+        <div class="box2">
+            <img src="{%static 'japan2.jpg'%}" alt="Collection and Transport">
+            <img src="{%static 'japan3.jpg'%}" alt="Collection and Transport">
+                
+        </div>
+    </div>      
+    <div id="first">
+        <div class="box1">
+            <h3 class="h-secondary">Medical waste disposal technology</h3>
+            <h4 class="h-ternary">New-Generation Incineration Technology</h4>
+            <p>Some waste generated from medical institutes may be contagious. In the past, Japan has experience cases of 
+                medical accidents in which medical staff were infected by hepatitis B with needles used on hepatitis patients 
+                which eventually caused death. Such accidents attracted public attention and made people aware of the need 
+                for the sterilization of medical waste. Today, there are laws regulating methods of medical waste disposal. The 
+                risk of contaminated waste being mixed with general waste and increasing the possibility of the spread of 
+                contamination highlights the need for appropriate treatment and disposal.
+            </p>
+            <h4 class="h-ternary">Diverse incinerators that control the generation of dioxins</h4>
+            <p>Diverse incinerators that control the generation of dioxins
+                Other than harmful bacteria and viruses, medical waste contains vinyl chloride and organochlorine chemicals, 
+               and simple incineration may generate hydrogen chloride and dioxin. Japan has strict regulations regarding the 
+               generation of dioxin and measures are taken to reduce dioxin through incinerator structure, operation methods, 
+               and dioxin elimination systems, and incinerators specifically for medical waste are used to reduce dioxin content 
+               in the gas emissions.
+                Some of the furnaces used as medical waste incinerators to control the emission of dioxin are gasification 
+               furnaces, kiln furnaces and vertical furnaces that safely and completely burn waste
+            </p>
+        </div>
+        <img src="{%static 'japan4.jpg'%}" alt="Collection and Transport">
+    </div>
+    <div id="third">
+        <h3 class="h-secondary">PET bottle recycling technology</h3>
+        <h4 class="h-ternary">Collection and recycling to make diverse products - </h4>
+        
+        <p>Under the 3R policy (Reduce, Reuse, Recycle), Japan has been collecting PET bottles, food trays, and cans 
+            separately for reuse as recycle resources in the manufacturing of new products. PET bottles are collected in 
+            accordance with the Act on the Promotion of Sorted Collection and Recycling Containers and Packaging, and 
+            they are used to make a variety of textile products, etc. Relatively high-grade PET bottles are collected and 
+            remade into PET bottles or carpets with the high technology possessed by Japan.The collected bottles are cleaned, and caps and labels taken off to improve their quality. The bottles are then 
+            compressed, bound and passed on to reproduction contractors.
+        </p>
+        <h4 class="h-ternary">Resource recycling technology to produce high quality products - </h4>
+        
+        <p> Recycled resin from PET bottle waste is used to make material for civil engineering and inner cotton for bedding. 
+            It was thought that making long fiber or resin product that will not decolorize would be difficult to achieve.
+             One Japanese company began recycling and reproducing PET bottles in China, Thailand and Taiwan. There 
+            are cases of recycled material being colored at the resin stage and made into high quality carpets using high 
+            level sewing skill.
+        </p>
+        <h4 class="h-ternary">System to efficiently collect PET bottles - </h4>
+        
+        <p> Japan passed the Law for the Promotion of Sorted Collection and Recycling Containers and Packaging in 
+            1995, driving municipalities to collect recyclable resources. With it Japan has structured a sophisticated 
+            recycling system. Waste PET bottles contain foreign material and substances which only allowed reproduction 
+            into low quality products; however, today's recycling technology developed sophisticated methods for foreign 
+            matter removal and recycling, bringing out high added value products.
+             Some municipalities set up a subsidy system for neighborhoods that voluntarily collect recyclable waste, 
+            thereby promoting the PET bottle collection and recycling of waste
+        </p>
+    </div>
+    <div id="second">
+        <h3 class="h-secondary"> Biomass utilization technology </h3>
+        
+        <h4 class="h-ternary">Active use of biomas - </h4>
+        
+        <p>Waste generated in cities and villages includes combustible waste with low moisture content, such as paper, 
+            plastic, and wood debris; and waste with high moisture content, such as food production waste, kitchen waste, 
+            manure, sewage sludge, biomass and other organic sludge. Waste with high moisture content will generate 
+            methane gas and hydrogen sulfide when buried without treatment, causing environmental pollution. Incineration 
+            of high moisture waste requires sub-material to assist with the incineration. Cooking oil waste with low moisture 
+            content may be effectively recycled as BDF, and energy can be recovered from wood debris incineration. Waste 
+            treatment, such as composting, methane fermentation, and use as animal feed, that best suit the features of the 
+            locale is selected.
+             Aiming for the structuring of a recycling society, food production waste and kitchen waste from homes, barn 
+            animal manure, sludge and other biomass are treated independently or in combination with incineration. Below 
+            are examples of leading biomass technology
+        </p>
+        <h4 class="h-ternary">Using energy generated from sewage sludge - </h4>
+        <p> Sewage sludge collected at sewage treatment plants in Japan totaled 2,230,000 tons in the fiscal year 2006. 
+            Composition of the sewage sludge is approximately 80% organic matter (1,790,000 tons) and the remaining 
+            20% is inorganic matter (450,000 tons). Seventy percent of inorganic matter is recycled as material for cement 
+            and bricks. Organic matter is recycled as fertilizer (10%), sewage gas (12%) and sludge fuel (0.6%), and the 
+            remaining 77% is incinerated or buried. </p>
+        <p>If 2,230,000 tons of sewage sludge is recovered as energy, heat equivalent to that produced by approximately 
+            975,000 kiloliters of crude oil is generated. Fossil fuel is now being replaced by fuel obtained from sewage 
+            sludge in order to reduce CO2 emissions. There are two methods of recycling sewage sludge as fuel: sewage 
+            gas (methane gas) generation and carbonization (carbon fuel). The figure below shows the recent use of energy 
+            from sewage sludge in Japan. Sewage sludge will always be generated by human activity. Seeing this as energy, 
+            energy from the sludge can be supplied stably in large cities, increasing the value of sludge as a resource. 
+            Recycling sewage sludge as energy is expected to increase to full-scale in the years to come.</p>
+        <div class="box2">
+            <img src="{%static 'japan5.jpg'%}" alt="Collection and Transport">
+            <img src="{%static 'japan6.jpg'%}"alt="Collection and Transport">
+                    
+        </div>
+    </div>
+</body>
+</html>

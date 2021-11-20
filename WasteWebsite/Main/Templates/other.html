@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Solid Waste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+    
+
+        .h-primary {
+            font-size: 3rem;
+            font-family: 'Ubuntu', sans-serif;
+            text-shadow: 2px 2px gray;
+        }
+
+        .h-secondary {
+            font-size: 2rem;
+        }
+
+        .text-align {
+            text-align: center;
+        }
+
+        /* part 1 */
+        #i1 p {
+            margin: 5px 30px;
+            font-size: 1.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .box1 p {
+            margin: 5px 30px;
+            font-size: 1.2rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .box1 li {
+            margin: 5px 40px;
+            font-size: 1.1rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+
+        }
+
+        #i2 {
+            display: flex;
+            margin: 10px;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #i2 img {
+            height: 500px;
+            width: 40%;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .box1 p {
+            font-size: 1.3rem;
+        }
+
+
+        /* body styling  - part 2*/
+        .body {
+            margin-top: 200px;
+        }
+
+        #characteristics {
+            width: 80%;
+            margin: 20px 100px;
+        }
+
+        #characteristics::before {
+            content: "";
+            background-image: url("{% static 'r1.jpg' %}");
+            position: absolute;
+            width: 80%;
+            height: 55%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #characteristics li {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 5px;
+            padding: 3px;
+        }
+
+        /* part 3 */
+        .main_box {
+            display: flex;
+            width: 100vw;
+
+
+        }
+
+        .container {
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .container p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .container img {
+            display: block;
+            margin: auto;
+            height: 100px;
+            width: 200px;
+        }
+
+        #container-1 {
+            width: 30%;
+        }
+
+        #container-2 {
+            width: 30%;
+        }
+
+        #container-3 {
+            width: 30%;
+        }
+
+        /* Responsiveness of website ,part-1 */
+
+        @media only screen and (max-width:810px){
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+            .h-secondary {
+                font-size: 1.4rem;
+            }
+
+            /* part-1 */
+            #i1 p {
+                margin: 5px 10px;
+                font-size: 1.1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            #i2 {
+                display: flex;
+                margin: 3px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .box1 p {
+                margin: 5px;
+                font-size: 1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            .box1 li {
+                margin: 6px;
+                font-size: 0.9rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+
+            }
+
+            /* part-2 */
+            #characteristics li {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 2px;
+
+            }
+
+            /* part-3 */
+            .main_box {
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw; */
+            }
+
+            #container-1 {
+                width: 100%;
+            }
+
+            #container-2 {
+                width: 100%;
+            }
+
+            #container-3 {
+                width: 100%;
+            }
+
+        }
+
+        /* Responsiveness of website ,part-1 */
+
+        @media only screen and (max-width:670px) {
+            .h-primary {
+                font-size: 2rem;
+                font-family: 'Ubuntu', sans-serif;
+                text-shadow: 1.5px 1.5px gray;
+            }
+
+            .h-secondary {
+                font-size: 1.4rem;
+            }
+
+            #i2 {
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                
+                /* align-items: center; */
+                /* justify-content: center; */
+            }
+
+            #i2 img {
+                height: 500px;
+                width: 100%;
+            }
+            
+            .box1 p {
+            
+                font-size: 1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            .box1 li {
+                margin: 0px;
+                padding: 0px;
+                
+                font-size: 0.9rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+
+            }
+            /* part-2 */
+            #characteristics li {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 0.8rem;
+                font-weight: bold;
+                
+
+            }
+            /* part-3 */
+            .main_box {
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw; */
+            }
+
+            #container-1 {
+                width: 100%;
+            }
+
+            #container-2 {
+                width: 100%;
+            }
+
+            #container-3 {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body bgcolor="lightgrey">
+    <div class="content">
+
+        <div class="intro">
+            <div id="i1">
+                <h1 class="h-primary text-align">Other Solid Waste</h1>
+                <p class="text-align">
+                    Solid wastes are categorized as municipal waste, industrial
+waste, and hazardous wastes. Municipal waste arises from
+domestic activities of human beings. Industrial waste arises
+from industrial activities and hazardous wastes are the
+substances which causes hazard to plants, animals and human
+beings. Few of the common hazardous waste is radioactive
+substances, chemicals, biological wastes, flammable wastes
+and explosives
+                </p>
+            </div>
+            <div id="i2">
+                <div class="box1">
+                    <h3 class="h-primary">Glass Waste</h3>
+
+                    <p>A study comparing the environmental impacts of various single-use beverage containers has concluded that glass bottles have a greater overall impact than plastic bottles, primarily because they are heavier and require more energy to manufacture.
+                    </p>
+                    <ul>
+                        <li>Every month, we throw out enough glass bottles and jars to fill up a giant skyscraper. All of these jars are recyclable!</li>
+                        <li>A modern glass bottle would take 4000 years or more to decompose -- and even longer if it's in the landfill.
+                        </li>
+                        <li> Mining and transporting raw materials for glass produces about 385 pounds of waste for every ton of glass that is made. If recycled glass is substituted for half of the raw materials, the waste is cut by more than 80%.</li>
+                    </ul>
+                </div>
+                <img src="{% static 'gl.jpg' %}" alt="Failed to load image">
+
+            </div>
+            <div id="characteristics">
+                <h4 class="h-primary text-align">Reduction efforts for Glass waste</h4>
+                <ul type="square">
+                    <li><span class="h-secondary">Glass Recyling-</span> Recycled glass containers are always needed because glass manufacturers require high-quality recycled container glass to meet market demands for new glass containers.
+                        Recycled glass is always part of the recipe for glass, and the more that is used, the greater the decrease in energy used in the furnace. This makes using recycled glass profitable in the long run, lowering costs for glass container manufacturers—and benefiting the environment.</li>
+                    <li><span class="h-secondary">How To Handle Lightbulbs-</span> 
+                        You CANNOT recycle light bulbs (not CFLs), ceramics, Pyrex, kitchen glassware like glasses and plates, or white skin cream jars. These types of glass have different melting temperatures than regular glass and form solid inclusions in the final product.
+CFLs, compact fluorescent lights, give off the same amount of visible light as an incandescent bulb, but they use less power and have a longer rated life. Although CFLs have many environmental benefits, they do contain a small amount of mercury, and so need to be disposed of properly. So what can you do? Take them to your community’s hazardous waste collection site—that information can be found through calling your town hall or looking up waste management or public works departments online.
+                    </li>
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div id="i2">
+            <div class="box1">
+                <h3 class="h-primary">Metal Waste</h3>
+
+                <p>
+                    This is the third in a series of articles about reducing the amount of the most common materials in household waste.
+
+Metal is the fifth most common material in household garbage, after paper, food, plastic, and yard waste. Unlike the other top items, metal is inert in a landfill and cannot be burned.
+
+Mining metal is among the world’s most environmentally damaging industries. Fortunately, once mined, most metal is infinitely recyclable (meaning that the material does not degrade after repeated recycling). Because of this,
+ people who are committed to minimizing waste may find themselves using more metal as they strive to eliminate plastic waste.
+                </p>
+                <ul>
+                    <li>Metals are consistently among the most valuable recyclable commodities. In fact, you might be able to make money recycling your scrap metal.!</li>
+                    <li>
+                        Ferrous metals, such as steel, contain iron and can be identified with a magnet, and is one of the most frequently recycled materials in the world. Nonferrous metals include aluminum — the aluminum can is the most recycled consumer product in the U.S. — as well as copper, lead, zinc, and tin.
+                    </li>
+                    <li>Metal Waste Includes-
+                        <ul>
+                            <li>Aluminum</li>
+                            <li>Soda cans</li>
+                            <li>Appliances</li>
+                            <li>Auto parts</li>
+                            <li>Windows</li>
+                            <li>Doors</li>
+                            <li>Steel</li>
+                            <li>Tin cans</li>
+                            <li>Auto parts</li>
+                            <li>Bridge parts</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <img src="{% static 'gl.jpg' %}" alt="Failed to load image"> 
+        </div>
+        <div id="characteristics">
+            <h4 class="h-primary text-align">Recyling Metal Waste</h4>
+            <ul type="square">
+                <li><span class="h-secondary">Benefits-</span> </li>
+               <li>You can go to scrap metal recycling facilities and get paid for what you bring</li>
+               <li>Reduces greenhouse gas emissions</li>
+               <li>Aluminum and steel can be recycled over and over again</li>
+                <li>Decreases environmental damage caused by mining</li>
+                    <li>Less land and water pollution</li>
+                   
+                
+                
+                
+            </ul>
+        </div>     
+            
+</body>
+
+</html>

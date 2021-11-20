@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plastic Waste</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <style>
+    
+
+        .h-primary {
+            font-size: 3rem;
+            font-family: 'Ubuntu', sans-serif;
+            text-shadow: 2px 2px gray;
+        }
+
+        .h-secondary {
+            font-size: 2rem;
+        }
+
+        .text-align {
+            text-align: center;
+        }
+
+        /* part 1 */
+        #i1 p {
+            margin: 5px 30px;
+            font-size: 1.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .box1 p {
+            margin: 5px 30px;
+            font-size: 1.2rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+        }
+
+        .box1 li {
+            margin: 5px 40px;
+            font-size: 1.1rem;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: bold;
+
+        }
+
+        #i2 {
+            display: flex;
+            margin: 10px;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #i2 img {
+            height: 500px;
+            width: 40%;
+        }
+
+        .box1 {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        .box1 p {
+            font-size: 1.3rem;
+        }
+
+
+        /* body styling  - part 2*/
+        .body {
+            margin-top: 200px;
+        }
+
+        #characteristics {
+            width: 80%;
+            margin: 20px 100px;
+        }
+
+        #characteristics::before {
+            content: "";
+            background-image: url("{% static 'r1.jpg' %}");
+            position: absolute;
+            width: 90%;
+            height: 95%;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        #characteristics li {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin: 5px;
+            padding: 3px;
+        }
+
+        /* part 3 */
+        .main_box {
+            display: flex;
+            width: 100vw;
+
+
+        }
+
+        .container {
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .container p {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .container img {
+            display: block;
+            margin: auto;
+            height: 100px;
+            width: 200px;
+        }
+
+        #container-1 {
+            width: 30%;
+        }
+
+        #container-2 {
+            width: 30%;
+        }
+
+        #container-3 {
+            width: 30%;
+        }
+
+        /* Responsiveness of website ,part-1 */
+
+        @media only screen and (max-width:810px){
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+            .h-secondary {
+                font-size: 1.4rem;
+            }
+
+            /* part-1 */
+            #i1 p {
+                margin: 5px 10px;
+                font-size: 1.1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            #i2 {
+                display: flex;
+                margin: 3px;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .box1 p {
+                margin: 5px;
+                font-size: 1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            .box1 li {
+                margin: 6px;
+                font-size: 0.9rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+
+            }
+
+            /* part-2 */
+            #characteristics li {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+                margin: 2px;
+
+            }
+
+            /* part-3 */
+            .main_box {
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw; */
+            }
+
+            #container-1 {
+                width: 100%;
+            }
+
+            #container-2 {
+                width: 100%;
+            }
+
+            #container-3 {
+                width: 100%;
+            }
+
+        }
+
+        /* Responsiveness of website ,part-1 */
+
+        @media only screen and (max-width:670px) {
+            .h-primary {
+                font-size: 2rem;
+                font-family: 'Ubuntu', sans-serif;
+                text-shadow: 1.5px 1.5px gray;
+            }
+
+            .h-secondary {
+                font-size: 1.4rem;
+            }
+
+            #i2 {
+                display: flex;
+                flex-direction: column;
+                margin: 5px;
+                
+                /* align-items: center; */
+                /* justify-content: center; */
+            }
+
+            #i2 img {
+                height: 500px;
+                width: 100%;
+            }
+            
+            .box1 p {
+            
+                font-size: 1rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+            }
+
+            .box1 li {
+                margin: 0px;
+                padding: 0px;
+                
+                font-size: 0.9rem;
+                font-family: 'Ubuntu', sans-serif;
+                font-weight: bold;
+
+            }
+            /* part-2 */
+            #characteristics li {
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 0.8rem;
+                font-weight: bold;
+                
+
+            }
+            /* part-3 */
+            .main_box {
+                display: flex;
+                flex-direction: column;
+                /* width: 100vw; */
+            }
+
+            #container-1 {
+                width: 100%;
+            }
+
+            #container-2 {
+                width: 100%;
+            }
+
+            #container-3 {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body bgcolor="lightgrey">
+    <div class="content">
+
+        <div class="intro">
+            <div id="i1">
+                <h1 class="h-primary text-align">Plastic Waste</h1>
+                <p class="text-align">Plastic pollution is the accumulation of plastic objects and particles (e.g. plastic bottles, bags and microbeads) in the Earth's environment that adversely affects wildlife, wildlife habitat, and humans.
+                    Plastics that act as pollutants are categorized by size into micro-, meso-, or macro debris. Plastics are inexpensive and durable making them very adaptable for different uses; as a result humans produce a lot of plastic.However, the chemical structure of most plastics renders them resistant to many natural processes of degradation and as a result they are slow to degrade.
+                     Together, these two factors allow large volumes of plastic to enter the environment as mismanaged waste and for it to persist in the ecosystem.
+                </p>
+            </div>
+            <div id="i2">
+                <div class="box1">
+                    <h3 class="h-primary">Plastic Waste-The Problem</h3>
+
+                    <p>Plastic pollution can afflict land, waterways and oceans. It is estimated that 1.1 to 8.8 million tonnes of plastic waste enters the ocean from coastal communities each year. It is estimated that there is a stock of 86 million tons of plastic marine debris in the worldwide ocean as of the end of 2013, with an assumption that 
+                        1.4% of global plastics produced from 1950 to 2013 has entered the ocean and has accumulated there. Some researchers suggest that by 2050 there could be more plastic 
+                        than fish in the oceans by weight. Living organisms, particularly marine animals, can be harmed either by mechanical effects such as entanglement in plastic objects, problems related to ingestion of plastic waste, or through exposure to chemicals within plastics that interfere with their physiology.
+                    </p>
+                    <ul>
+                        <li>As of 2019, 368 million tonnes of plastic is produced each year; 51% in Asia, where China is the world's largest producer</li>
+                        <li>From the 1950s up to 2018, an estimated 6.3 billion tonnes of plastic has been produced worldwide, of which an estimated 9% has been recycled and another 12% has been incinerated.
+                        </li>
+                        <li> This large amount of plastic waste enters the environment, with studies suggesting that the bodies of 90% of seabirds contain plastic debris.</li>
+                    </ul>
+                </div>
+                <img src="{% static 'pl1.jpg' %}" alt="Entrepreneurship">
+
+            </div>
+            <div id="characteristics">
+                <h4 class="h-primary text-align">Reduction efforts</h4>
+                <ul type="square">
+                    <li><span class="h-secondary">Biodegradable and degradable plastics-</span> The use of biodegradable plastics has many advantages and disadvantages. Biodegradables are biopolymers 
+                        that degrade in industrial composters. Biodegradables do not degrade as efficiently 
+                        in domestic composters, and during this slower process, methane gas may be emitted
+                        There are also other types of degradable materials that are not considered to be biopolymers, because they are oil-based, similar to other conventional plastics. These plastics are made to be more degradable through the use of different additives, 
+                        which help them degrade when exposed to UV rays or other physical stressors.</li>
+                    <li><span class="h-secondary">Incineration-</span> 
+                        Up to 60% of used plastic medical equipment is incinerated rather than deposited in a landfill as a precautionary measure to lessen the transmission of disease. This has allowed for a large decrease in the amount of plastic waste that stems from medical equipment.
+                        At a large scale, plastics, paper, and other materials provides waste-to-energy plants with useful fuel. About 12% of total produced plastic has been incinerated.
+                    </li>
+                    <li><span class="h-secondary">Collection or recycling-</span>
+                        The two common forms of waste collection include curbside collection and the use of drop-off recycling centers. About 87 percent of the population 
+                        in the United States (273 million people) have access to curbside and drop-off recycling centers.
+                    </li>
+                    <li><span class="h-secondary">Non-usage and reduction in usage-</span> 
+                        The government of India decided to ban single use plastics and take a number of measures to recycle and reuse plastic, from 2 October 2019.
+                        In 2020 China published a plan to cut 30% of plastic waste in 5 years. As part of this plan, single use plastic bags and straws will be banned
+                        In 2015 the European Union adopted a directive requiring a reduction in the consumption of single use plastic bags per person to 90 by the year 2019 and to 40 by the year 2025.
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="body">
+            <h2 class="h-primary text-align"> Indian Government and NGO's Initiatives-</h2>
+            <div class="main_box">
+
+                <div class="container" id="container-1">
+                    <h3 class="h-secondary text-align">Reusables in government offices</h3>
+                    <img src="{% static '1.jpg' %}" alt="Error to load the image">
+                    <p class="para1">
+                        On June 5, government offices in Kerala made the switch to ink pens and steel cutlery to ensure articles like plastic water bottles, disposable teacups and plastic carry bags are no longer used across the office premises. Mooted by the Suchitwa Mission and 
+                        Haritha Keralam Mission, the idea envisioned by the concerned authorities was to make government departments set an example for a clean environment. The step can be easily emulated across not just government offices but 
+                        also corporates and private organisations while paving the way for an environment-friendly work culture.
+                    </p>
+                </div>
+                <div class="container" id="container-1">
+                    <h3 class="h-secondary text-align"> Crackdown on plastic usage</h3>
+                    <img src="{% static '3.jpg' %}" alt="Error to load the image">
+                    <p class="para1">
+                        While states like Maharashtra, Goa, Jammu and Kashmir, Karnataka and Punjab have imposed some form of a ban on plastic, there is also confusion among both the authorities and citizens as to what is permissible and what is not.
+
+                        Standing out in this regard is the state of Sikkim. Thanks to its complete crackdown on plastic, it went on to earn the tag of India’s cleanest state.
+                        
+                        Sikkim is the second smallest state in the country, and therefore, it had no scope for the creation of multiple landfill sites. In 1998, it became the first Indian state to ban disposable plastic bags, and in 2016, it took a significant step by banning the use of packaged drinking water in government offices and government events and the use of Styrofoam and thermocol disposable plates and cutlery across the entire state.
+                        
+                        If state governments work towards making alternative solutions cheaper and accessible to the public, what this tiny state has achieved in 20 years is no distant dream for the rest of the country. 
+                    </p>
+                </div>
+                <div class="container" id="container-1">
+                    <h3 class="h-secondary text-align">Fishing for plastic waste from water bodies</h3>
+                    <img src="{% static '2.jpg' %}" alt="Error to load the image">
+                    <p class="para1">
+                        The creatures of the sea are sadly paying the price of our indifference and inability to manage waste, and nothing is more disheartening than coming across multiple reports about the carcasses of marine animals on seashores, with plastic waste inside their bellies.
+
+However, there is help. As per a brilliant initiative helmed by Kerala’s Suchitwa Mission, 28 fishermen from the Neendakara harbour have been engaged in not just finding fish but also plastic that either gets stuck in the fishing nets or floats in the sea. In last 10 months since the project was launched, they have managed to recover 25 tonnes of plastic waste.
+
+Coastal states across India can implement similar drives by looping in local communities which play a critical role in conserving the marine ecosphere. Besides initiatives like this, many beach clean-ups have been undertaken in Versova and Chennai
+                    </p>
+                </div>
+                <div class="container" id="container-2">
+                    <h3 class="h-secondary text-align">Utilising plastic for road surfacing</h3>
+                    <img src="{% static '4.jpg' %}" alt="Error to load the image">
+                    <p class="para1">
+                        Thanks to Professor Rajagopalan Vasudevan of the Thiagarajar College of Engineering in Madurai, using plastics for road surfacing is now a reality, and many states are considering to implement this pioneering tactic to manage their plastic waste. Kerala, Maharashtra and Tamil Nadu are a few states that have already begun work on these lines.
+
+Imagine the amounts of plastic waste that can be put to better use while flagging off development projects across the country!
+                    </p>
+                </div>
+                <div class="container" id="container-3">
+                    <h3 class="h-secondary text-align">Upcycling plastic for better purposes</h3>
+                    <img src="{% static '5.jpeg' %}" alt="Error to load the image">
+                    <p class="para1">
+                        From construction materials to threads and fabrics for the textile industry, many organisations across India have been upcycling plastic for more significant purposes.
+
+The malleability of plastic is what made it a household entity almost a century ago, and now, the same property is being used to keep a tab on our wastages. Even the government’s recent proposal to introduce plastic currency notes is a great step in upcycling plastic waste.
+                    </p>
+                </div>
+            </div>
+            <span>
+                
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
